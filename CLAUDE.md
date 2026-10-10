@@ -32,6 +32,13 @@ WebAssembly app. Don't introduce anything that needs an ASP.NET Core server at r
 will be a Cloudflare Worker in TypeScript. See
 [ADR-0002](docs/adr/0002-blazor-webassembly-standalone-with-shared-rcl.md).
 
+## Deployment
+
+Cloudflare Workers Builds deploys `master` to production on every push; other branches get
+preview versions. Build settings live in the Cloudflare dashboard, see
+[ADR-0003](docs/adr/0003-deploy-with-cloudflare-workers-builds.md). `wrangler.toml` must
+keep `name = "mental-inventory"` and the assets directory pointing at the publish output.
+
 ## Commands
 
 ```bash

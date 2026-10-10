@@ -71,3 +71,6 @@ bin/
 obj/
 .vs/
 *.user
+
+# Wrangler local state
+.wrangler/
