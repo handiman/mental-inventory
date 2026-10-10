@@ -32,6 +32,17 @@ WebAssembly app. Don't introduce anything that needs an ASP.NET Core server at r
 will be a Cloudflare Worker in TypeScript. See
 [ADR-0002](docs/adr/0002-blazor-webassembly-standalone-with-shared-rcl.md).
 
+## Observability
+
+Instrument against the BCL, never a telemetry SDK (see
+[ADR-0005](docs/adr/0005-observability-on-bcl-diagnostics-without-an-exporter-yet.md)):
+
+- Traces: `Telemetry.ActivitySource.StartActivity(...)` and use `?.` on the result.
+  Metrics: instruments created from `Telemetry.Meter`. Don't create other sources or meters.
+- Logs: add a `[LoggerMessage]` method to `Diagnostics/Log.cs` (or a partial in the class
+  that logs) with a new, unique event id. No string-interpolated log calls.
+- Never put item texts or other user content in logs, tags or metrics.
+
 ## Deployment
 
 Cloudflare Workers Builds deploys `master` to production on every push; other branches get
