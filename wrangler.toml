@@ -1,0 +1,9 @@
+# Static-assets-only Worker serving the published Blazor WebAssembly app.
+# Build first:  dotnet publish src/MentalInventory.Web -c Release
+# Deploy:       npx wrangler deploy
+name = "mental-inventory"
+compatibility_date = "2026-10-01"
+
+[assets]
+directory = "./src/MentalInventory.Web/bin/Release/net10.0/publish/wwwroot"
+not_found_handling = "single-page-application"
