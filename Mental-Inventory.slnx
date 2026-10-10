@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="CLAUDE.md" />
+    <File Path="CONTRIBUTING.md" />
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/MentalInventory.Shared/MentalInventory.Shared.csproj" />
+    <Project Path="src/MentalInventory.Web/MentalInventory.Web.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/MentalInventory.Shared.Tests/MentalInventory.Shared.Tests.csproj" />
+  </Folder>
+</Solution>
