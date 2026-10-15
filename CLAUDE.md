@@ -10,6 +10,11 @@ columns: working on / should be working on / want to be working on). Web first; 
 
 ## Structure
 
+- `src/MentalInventory.Domain` (class library): the domain model. Event sourced with the
+  decider pattern: pure `Decide`/`Evolve` functions over immutable records, one stream per
+  inventory. No package, UI, persistence or serialization references. Never change or
+  remove a field on an existing event. See [docs/domain-model.md](docs/domain-model.md) and
+  [ADR-0004](docs/adr/0004-event-sourced-domain-with-the-decider-pattern.md).
 - `src/MentalInventory.Shared` (Razor Class Library): all UI, including the components,
   pages, layout and `Routes.razor`. New UI goes here, never in a host project.
 - `src/MentalInventory.Web` (Blazor WebAssembly Standalone, PWA): a thin host. It only

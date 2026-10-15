@@ -6,10 +6,12 @@
     <File Path="wrangler.toml" />
   </Folder>
   <Folder Name="/src/">
+    <Project Path="src/MentalInventory.Domain/MentalInventory.Domain.csproj" />
     <Project Path="src/MentalInventory.Shared/MentalInventory.Shared.csproj" />
     <Project Path="src/MentalInventory.Web/MentalInventory.Web.csproj" />
   </Folder>
   <Folder Name="/test/">
+    <Project Path="test/MentalInventory.Domain.Tests/MentalInventory.Domain.Tests.csproj" />
     <Project Path="test/MentalInventory.Shared.Tests/MentalInventory.Shared.Tests.csproj" />
   </Folder>
 </Solution>

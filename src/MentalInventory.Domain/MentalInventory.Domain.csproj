@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- The domain model. Deliberately free of package and framework references:
+       no UI, no persistence, no serialization. See docs/adr/0004. -->
+  <PropertyGroup>
+    <IsTrimmable>true</IsTrimmable>
+  </PropertyGroup>
+
+</Project>

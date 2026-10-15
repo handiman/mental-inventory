@@ -27,4 +27,5 @@ obvious answer.
 | [0001](0001-record-architecture-decisions.md) | Record architectural decisions with ADRs | Accepted |
 | [0002](0002-blazor-webassembly-standalone-with-shared-rcl.md) | Blazor WebAssembly standalone with a shared Razor Class Library, MAUI Blazor Hybrid later | Accepted |
 | [0003](0003-deploy-with-cloudflare-workers-builds.md) | Deploy with Cloudflare Workers Builds (Git integration) | Accepted |
+| [0004](0004-event-sourced-domain-with-the-decider-pattern.md) | Event-sourced domain model with the decider pattern | Proposed |
 | [0005](0005-observability-on-bcl-diagnostics-without-an-exporter-yet.md) | Observability on BCL diagnostics, without an exporter yet | Proposed |
