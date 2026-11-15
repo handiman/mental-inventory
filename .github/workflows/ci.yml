@@ -43,9 +43,11 @@ jobs:
 
       - name: Generate coverage report
         if: ${{ !cancelled() }}
+        # Local tool from .config/dotnet-tools.json: version pinned in the repo (kept current
+        # by Dependabot) and no dependency on ~/.dotnet/tools being on the runner's PATH.
         run: |
-          dotnet tool install --global dotnet-reportgenerator-globaltool
-          reportgenerator \
+          dotnet tool restore
+          dotnet reportgenerator \
             -reports:"TestResults/**/coverage.cobertura.xml" \
             -targetdir:CoverageReport \
             -reporttypes:"Html;MarkdownSummaryGithub;Cobertura"
